@@ -28,7 +28,7 @@ const DarkMode = () => {
   }, [theme]);
   return (
     <>
-      <div className="relative ">
+      <div className="relative">
         <img
           // src={theme === "dark" ? darkPng : lightPng}
           src={lightPng}

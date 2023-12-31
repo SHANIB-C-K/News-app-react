@@ -5,7 +5,9 @@ const News = ({ category }) => {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
-    let url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=b1e4072d030c42d4a4a7f4ca2e93269b`;
+    let url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${
+      import.meta.env.VITE_API_KEY
+    }`;
     fetch(url)
       .then((response) => response.json())
       .then((data) => setArticles(data.articles));
