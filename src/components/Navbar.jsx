@@ -25,28 +25,19 @@ const Navbar = () => {
               </div>
               <ul className="hidden sm:flex gap-4">
                 <li>
-                  <a
-                    href="#"
-                    className="inline-block py-4 px-4 hover:text-primary"
-                  >
-                    Home
-                  </a>
+                  <div className="inline-block py-4 px-4 hover:text-primary">Technology</div>
                 </li>
                 <li>
-                  <a
-                    href="#"
-                    className="inline-block py-4 px-4 hover:text-primary"
-                  >
-                    About
-                  </a>
+                  <div className="inline-block py-4 px-4 hover:text-primary">Business</div>
                 </li>
                 <li>
-                  <a
-                    href="#"
-                    className="inline-block py-4 px-4 hover:text-primary"
-                  >
-                    Contact
-                  </a>
+                  <div className="inline-block py-4 px-4 hover:text-primary">Health</div>
+                </li>
+                <li>
+                  <div className="inline-block py-4 px-4 hover:text-primary">Sports</div>
+                </li>
+                <li>
+                  <div className="inline-block py-4 px-4 hover:text-primary">Entertainment</div>
                 </li>
               </ul>
             </div>
