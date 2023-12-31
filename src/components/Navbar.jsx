@@ -2,7 +2,7 @@
 
 // This is importing section
 import React from "react";
-import { FaCartShopping } from "react-icons/fa6";
+import DarkMode from "./DarkMode";
 
 const Navbar = () => {
   return (
@@ -20,6 +20,7 @@ const Navbar = () => {
             </div>
             <div className="flex items-center gap-4">
               <div>
+                <DarkMode />
                 {/* This is DarkMode page call */}
               </div>
               <ul className="hidden sm:flex gap-4">

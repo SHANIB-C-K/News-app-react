@@ -2,8 +2,8 @@
 
 // This is importing section
 import React, { useState, useEffect } from "react";
-import darkPng from "../../assets/website/dark-mode-button.png";
-import lightPng from "../../assets/website/light-mode-button.png";
+import darkPng from "../assets/dark-mode-button.png";
+import lightPng from "../assets/light-mode-button.png";
 
 const DarkMode = () => {
   // This is DarkMde Function
