@@ -3,18 +3,18 @@ import React from "react";
 const NewsItem = ({ title, description, src, url }) => {
   return (
     <>
-      <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <div className="mb-3 inline-block my-3 mx-3 px-2 py-2 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700" style={{maxWidth: "345px"}}>
         <a href="#">
-          <img className="rounded-t-lg" src={src} alt="" />
+          <img className="rounded-t-lg h-[200px] w-[360px]" src={src} alt="" />
         </a>
         <div className="p-5">
           <a href="#">
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-              {title}
+              {title?.title}
             </h5>
           </a>
           <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-            {description}
+            {description?description.slice(0,90): "News is not available"}
           </p>
           <a
             href={url}
