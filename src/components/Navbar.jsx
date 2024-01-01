@@ -67,7 +67,7 @@ const Navbar = ({ setCategory }) => {
                   <li
                     key={link.id}
                     className="block py-2 px-3 hover:text-primary bg-blue-700 rounded lg:bg-transparent lg:text-blue-700 lg:p-0 dark:text-white lg:dark:text-blue-500 cursor-pointer"
-                    onClick={() => OnClick(link.id, link.value)}
+                    onClick={() => OnClick(link.value)}
                   >
                     {link.name}
                   </li>
