@@ -4,6 +4,7 @@
 import React, { useState } from "react";
 import DarkMode from "./DarkMode";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { IoClose } from "react-icons/io5";
 
 const Navbar = ({ setActive, setCategory }) => {
   const [isClick, setIsClick] = useState(false);
@@ -44,6 +45,7 @@ const Navbar = ({ setActive, setCategory }) => {
               {/* This is DarkMode page call */}
             </div>
             <button
+              onClick={HandleClick}
               data-collapse-toggle="navbar-default"
               type="button"
               className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
@@ -51,7 +53,11 @@ const Navbar = ({ setActive, setCategory }) => {
               aria-expanded="false"
             >
               <span className="sr-only">Open main menu</span>
-              <GiHamburgerMenu className="w-20 h-20 lg:hidden" />
+              {isClick ? (
+                <IoClose className="w-20 h-20 lg:hidden" />
+              ) : (
+                <GiHamburgerMenu className="w-20 h-20 lg:hidden" />
+              )}
             </button>
             <div
               className="hidden w-full lg:block lg:w-auto"
