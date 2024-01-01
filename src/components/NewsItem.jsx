@@ -1,4 +1,5 @@
 import React from "react";
+import image from "../assets/news.webp";
 
 const NewsItem = ({ title, description, src, url, isLoading }) => {
   return (
@@ -27,13 +28,13 @@ const NewsItem = ({ title, description, src, url, isLoading }) => {
         </div>
       ) : (
         <div
-          className="mb-3 inline-block my-3 mx-3 px-2 py-2  border  rounded-lg shadow bg-gray-800 border-gray-700"
-          style={{ maxWidth: "345px" }}
+          className="mb-3 ml-8 mt-6 md:ml-7 md:mt-6 lg:ml-14 px-2 py-2  border  rounded-lg shadow bg-gray-800 border-gray-700 min-h-96 inline-table"
+          style={{ maxWidth: "345px"}}
         >
           <a href="#">
             <img
               className="rounded-t-lg h-[200px] w-[360px]"
-              src={src}
+              src={src ? src : image}
               alt=""
             />
           </a>
