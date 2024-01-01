@@ -1,11 +1,17 @@
 // This is Navbar page
 
 // This is importing section
-import React from "react";
+import React, { useState } from "react";
 import DarkMode from "./DarkMode";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 const Navbar = ({ setActive, setCategory }) => {
+  const [isClick, setIsClick] = useState(false);
+
+  const HandleClick = () => {
+    setIsClick(!isClick);
+  };
+
   const links = [
     { id: 1, name: "General", value: "general" },
     { id: 2, name: "Technology", value: "technology" },
