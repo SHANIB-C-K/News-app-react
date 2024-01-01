@@ -69,6 +69,21 @@ const Navbar = ({ setCategory }) => {
                 ))}
               </ul>
             </div>
+            {isClick && (
+              <div className="bg-gray-950 fixed inset-x-0 top-24 mx-8 flex flex-col items-center justify-center lg:hidden rounded-xl text-blue-700">
+                <ul className="bg-gray-950 flex flex-col items-center justify-center my-8 gap-6">
+                  {links.map((link) => (
+                    <li
+                      key={link.id}
+                      className="block py-2 px-3 hover:text-primary"
+                      onClick={() => OnClick(link.value)}
+                    >
+                      {link.name}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
         </div>
       </nav>

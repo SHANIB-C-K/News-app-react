@@ -9,7 +9,7 @@ const NewsItem = ({ title, description, src, url, isLoading }) => {
           <div role="status">
             <svg
               aria-hidden="true"
-              class="w-12 h-12  animate-spin text-gray-600 fill-blue-600"
+              className="w-12 h-12  animate-spin text-gray-600 fill-blue-600"
               viewBox="0 0 100 101"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -23,12 +23,12 @@ const NewsItem = ({ title, description, src, url, isLoading }) => {
                 fill="currentFill"
               />
             </svg>
-            <span class="sr-only">Loading...</span>
+            <span className="sr-only">Loading...</span>
           </div>
         </div>
       ) : (
         <div
-          className="mb-3 ml-8 mt-6 md:ml-7 md:mt-6 lg:ml-14 px-2 py-2  border  rounded-lg shadow bg-gray-800 border-gray-700 min-h-96 inline-table"
+          className="mb-3 ml-6 mt-6 md:ml-7 md:mt-6 lg:ml-14 px-2 py-2  border  rounded-lg shadow bg-gray-800 border-gray-700 min-h-96 lg:inline-table md:inline-block flex flex-col items-center justify-between"
           style={{ maxWidth: "345px"}}
         >
           <a href="#">
