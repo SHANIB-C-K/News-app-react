@@ -8,7 +8,7 @@ const NewsItem = ({ title, description, src, url, isLoading }) => {
           <div role="status">
             <svg
               aria-hidden="true"
-              class="w-16 h-16  animate-spin text-gray-600 fill-blue-600"
+              class="w-12 h-12  animate-spin text-gray-600 fill-blue-600"
               viewBox="0 0 100 101"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
