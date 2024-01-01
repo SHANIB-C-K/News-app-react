@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import NewsItem from "./NewsItem";
 
-const News = ({ category }) => {
+const News = ({ category, setIsLoading }) => {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
+    setIsLoading(true);
     let url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${
       import.meta.env.VITE_API_KEY
     }`;
@@ -15,8 +16,8 @@ const News = ({ category }) => {
 
   return (
     <>
-      <div className="pt-5">
-        <h2 className="text-center font-bold text-5xl">
+      <div className="pt-5 bg-gray-900">
+        <h2 className="text-center font-bold text-5xl text-white">
           Latest <span className="text-red-800">News</span>
         </h2>
         <div>

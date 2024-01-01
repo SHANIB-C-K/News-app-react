@@ -2,7 +2,6 @@
 
 // This is importing section
 import React, { useState } from "react";
-import DarkMode from "./DarkMode";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
 
@@ -28,21 +27,17 @@ const Navbar = ({ setCategory }) => {
   }
   return (
     <>
-      <nav className="shadow-md bg-white dark:bg-gray-900 dark:text-white duration-200">
+      <nav className="shadow-md bg-gray-900 text-white duration-200">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <a
             href="/"
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
-            <span className="self-center text-3xl font-bold whitespace-nowrap dark:text-white">
+            <span className="self-center text-3xl font-bold whitespace-nowrap text-white">
               News App
             </span>
           </a>
           <div className="flex justify-between items-center">
-            <div className="pr-4">
-              <DarkMode />
-              {/* This is DarkMode page call */}
-            </div>
             <button
               onClick={HandleClick}
               data-collapse-toggle="navbar-default"
@@ -62,11 +57,11 @@ const Navbar = ({ setCategory }) => {
               className="hidden w-full lg:block lg:w-auto"
               id="navbar-default"
             >
-              <ul className="font-medium flex flex-col p-4 lg:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 lg:flex-row lg:space-x-8 rtl:space-x-reverse lg:mt-0 lg:border-0 lg:bg-white dark:bg-gray-800 lg:dark:bg-gray-900 dark:border-gray-700">
+              <ul className="font-medium flex flex-col p-4 lg:p-0 mt-4 border  rounded-lg lg:flex-row lg:space-x-8 rtl:space-x-reverse lg:mt-0 lg:border-0  bg-gray-800 lg:bg-gray-900 border-gray-700">
                 {links.map((link) => (
                   <li
                     key={link.id}
-                    className="block py-2 px-3 hover:text-primary bg-blue-700 rounded lg:bg-transparent lg:text-blue-700 lg:p-0 dark:text-white lg:dark:text-blue-500 cursor-pointer"
+                    className="block py-2 px-3 hover:text-primary bg-blue-700 rounded lg:bg-transparent lg:text-blue-700 lg:p-0  text-blue-500 cursor-pointer"
                     onClick={() => OnClick(link.value)}
                   >
                     {link.name}
