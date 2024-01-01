@@ -6,7 +6,7 @@ import DarkMode from "./DarkMode";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
 
-const Navbar = ({ setActive, setCategory }) => {
+const Navbar = ({ setCategory }) => {
   const [isClick, setIsClick] = useState(false);
 
   const HandleClick = () => {
@@ -23,8 +23,7 @@ const Navbar = ({ setActive, setCategory }) => {
     { id: 7, name: "Entertainment", value: "entertainment" },
   ];
 
-  function OnClick(id, value) {
-    setActive(id);
+  function OnClick(value) {
     setCategory(value);
   }
   return (
@@ -67,7 +66,7 @@ const Navbar = ({ setActive, setCategory }) => {
                 {links.map((link) => (
                   <li
                     key={link.id}
-                    className="block py-2 px-3 hover:text-primary bg-blue-700 rounded lg:bg-transparent lg:text-blue-700 lg:p-0 dark:text-white lg:dark:text-blue-500"
+                    className="block py-2 px-3 hover:text-primary bg-blue-700 rounded lg:bg-transparent lg:text-blue-700 lg:p-0 dark:text-white lg:dark:text-blue-500 cursor-pointer"
                     onClick={() => OnClick(link.id, link.value)}
                   >
                     {link.name}
