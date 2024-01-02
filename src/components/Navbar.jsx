@@ -4,6 +4,7 @@
 import React, { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
+import { useAutoAnimate } from "@formkit/auto-animate/preact";
 
 const Navbar = ({ setCategory }) => {
   const [isClick, setIsClick] = useState(false);
