@@ -5,7 +5,7 @@ const NewsItem = ({ title, description, src, url, isLoading }) => {
   return (
     <>
       {isLoading ? (
-        <div className="h-screen w-screen bg-gray-900 flex flex-col items-center justify-center">
+        <div className="h-screen w-screen bg-gray-900 flex flex-col items-center pt-32 lg:pt-56">
           <div role="status" className="bg-gray-900">
             <svg
               aria-hidden="true"
@@ -29,7 +29,7 @@ const NewsItem = ({ title, description, src, url, isLoading }) => {
       ) : (
         <div
           className=" border rounded-lg shadow bg-gray-800 border-gray-700 min-h-96  flex flex-col items-center justify-between mx-auto px-2 py-2"
-          style={{ maxWidth: "345px"}}
+          style={{ maxWidth: "345px" }}
         >
           <a href="#">
             <img
