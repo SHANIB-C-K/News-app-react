@@ -41,10 +41,11 @@ const Navbar = ({ setCategory }) => {
           </a>
           <div className="flex justify-between items-center">
             <button
+              ref={animationParent}
               onClick={HandleClick}
               data-collapse-toggle="navbar-default"
               type="button"
-              className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg lg:hidden focus:outline-none focus:ring-2 text-gray-400 hover:bg-gray-700 focus:ring-gray-600"
               aria-controls="navbar-default"
               aria-expanded="false"
             >
@@ -59,10 +60,7 @@ const Navbar = ({ setCategory }) => {
               className="hidden w-full lg:block lg:w-auto"
               id="navbar-default"
             >
-              <ul
-                ref={animationParent}
-                className="font-medium flex flex-col p-4 lg:p-0 mt-4 border  rounded-lg lg:flex-row lg:space-x-8 rtl:space-x-reverse lg:mt-0 lg:border-0  bg-gray-800 lg:bg-gray-900 border-gray-700"
-              >
+              <ul className="font-medium flex flex-col p-4 lg:p-0 mt-4 border  rounded-lg lg:flex-row lg:space-x-8 rtl:space-x-reverse lg:mt-0 lg:border-0  bg-gray-800 lg:bg-gray-900 border-gray-700">
                 {links.map((link) => (
                   <li
                     key={link.id}

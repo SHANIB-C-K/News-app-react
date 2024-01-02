@@ -6,7 +6,7 @@ const NewsItem = ({ title, description, src, url, isLoading }) => {
     <>
       {isLoading ? (
         <div className="h-screen w-screen bg-gray-900 flex flex-col items-center justify-center">
-          <div role="status">
+          <div role="status" className="bg-gray-900">
             <svg
               aria-hidden="true"
               className="w-12 h-12  animate-spin text-gray-600 fill-blue-600"
