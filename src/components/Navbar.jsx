@@ -4,10 +4,11 @@
 import React, { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
-import { useAutoAnimate } from "@formkit/auto-animate/preact";
+import { useAutoAnimate } from "@formkit/auto-animate/react";
 
 const Navbar = ({ setCategory }) => {
   const [isClick, setIsClick] = useState(false);
+  const [animationParent] = useAutoAnimate();
 
   const HandleClick = () => {
     setIsClick(!isClick);
@@ -58,7 +59,10 @@ const Navbar = ({ setCategory }) => {
               className="hidden w-full lg:block lg:w-auto"
               id="navbar-default"
             >
-              <ul className="font-medium flex flex-col p-4 lg:p-0 mt-4 border  rounded-lg lg:flex-row lg:space-x-8 rtl:space-x-reverse lg:mt-0 lg:border-0  bg-gray-800 lg:bg-gray-900 border-gray-700">
+              <ul
+                ref={animationParent}
+                className="font-medium flex flex-col p-4 lg:p-0 mt-4 border  rounded-lg lg:flex-row lg:space-x-8 rtl:space-x-reverse lg:mt-0 lg:border-0  bg-gray-800 lg:bg-gray-900 border-gray-700"
+              >
                 {links.map((link) => (
                   <li
                     key={link.id}
