@@ -28,7 +28,7 @@ const NewsItem = ({ title, description, src, url, isLoading }) => {
         </div>
       ) : (
         <div
-          className="mb-3 ml-6 mt-6 md:ml-7 md:mt-6 lg:ml-14 px-2 py-2  border  rounded-lg shadow bg-gray-800 border-gray-700 min-h-96 lg:inline-table md:inline-block flex flex-col items-center justify-between"
+          className=" border rounded-lg shadow bg-gray-800 border-gray-700 min-h-96  flex flex-col items-center justify-between mx-auto px-2 py-2"
           style={{ maxWidth: "345px"}}
         >
           <a href="#">

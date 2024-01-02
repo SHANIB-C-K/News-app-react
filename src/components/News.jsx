@@ -20,7 +20,7 @@ const News = ({ category, setIsLoading }) => {
         <h2 className="text-center font-bold text-5xl text-white">
           Latest <span className="text-red-800">News</span>
         </h2>
-        <div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-8 py-32 pt-8 gap-6">
           {articles.map((news, index) => {
             return (
               <NewsItem
