@@ -7,14 +7,17 @@ import { IoClose } from "react-icons/io5";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 
 const Navbar = ({ setCategory }) => {
+  //This is usestate
   const [isClick, setIsClick] = useState(false);
   const [animationParent] = useAutoAnimate();
 
   const HandleClick = () => {
-    setIsClick(!isClick);
+    //This is HandleClick function 
+    setIsClick(!isClick); // this is setClick is bot click
   };
 
   const links = [
+    //This is a array
     { id: 1, name: "General", value: "general" },
     { id: 2, name: "Technology", value: "technology" },
     { id: 3, name: "Business", value: "business" },
@@ -25,10 +28,12 @@ const Navbar = ({ setCategory }) => {
   ];
 
   function OnClick(value) {
-    setCategory(value);
+    //This is onclick function 
+    setCategory(value); //this set in value 
   }
   return (
     <>
+      {/* This is html section */}
       <nav className="shadow-md bg-gray-900 text-white duration-200">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <a
@@ -40,6 +45,7 @@ const Navbar = ({ setCategory }) => {
             </span>
           </a>
           <div className="flex justify-between items-center">
+            {/* mobile view navbar button */}
             <button
               ref={animationParent}
               onClick={HandleClick}
@@ -51,8 +57,10 @@ const Navbar = ({ setCategory }) => {
             >
               <span className="sr-only">Open main menu</span>
               {isClick ? (
+              {/* This is check isClick . is true IoClose button show */}
                 <IoClose className="w-20 h-20 lg:hidden" />
               ) : (
+              {/* is false this button is showing */}
                 <GiHamburgerMenu className="w-20 h-20 lg:hidden" />
               )}
             </button>
@@ -62,6 +70,7 @@ const Navbar = ({ setCategory }) => {
             >
               <ul className="font-medium flex flex-col p-4 lg:p-0 mt-4 border  rounded-lg lg:flex-row lg:space-x-8 rtl:space-x-reverse lg:mt-0 lg:border-0  bg-gray-800 lg:bg-gray-900 border-gray-700">
                 {links.map((link) => (
+              {/* this is url maping section */}
                   <li
                     key={link.id}
                     className="block py-2 px-3 hover:text-primary bg-blue-700 rounded lg:bg-transparent lg:text-blue-700 lg:p-0  text-blue-500 cursor-pointer"
@@ -73,6 +82,7 @@ const Navbar = ({ setCategory }) => {
               </ul>
             </div>
             {isClick && (
+      {/*This is mobile view url showing section */}
               <div className="bg-gray-950 fixed inset-x-0 top-24 mx-8 flex flex-col items-center justify-center lg:hidden rounded-xl text-blue-700">
                 <ul className="bg-gray-950 flex flex-col items-center justify-center my-8 gap-6">
                   {links.map((link) => (
