@@ -1,11 +1,15 @@
+//This is News page 
+//This is importing section 
 import React, { useEffect, useState } from "react";
 import NewsItem from "./NewsItem";
 
 const News = ({ category, setIsLoading }) => {
+  //This is usestate
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
-    setIsLoading(true);
+    //This is a useffect
+    setIsLoading(true); //its set loading is false 
     let url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${
       import.meta.env.VITE_API_KEY
     }`;
